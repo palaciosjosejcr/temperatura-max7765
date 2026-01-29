@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitoreo de Temperatura - MAX6675</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: #0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .card {
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 15px #0f0;
+    }
+    .temp {
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Temperatura con MAX6675</h1>
+
+  <div class="card">
+    <p>Temperatura actual:</p>
+    <div class="temp" id="temp">-- °C</div>
+  </div>
+
+  <script>
+    // Simulación de temperatura (para GitHub)
+    function actualizarTemp() {
+      let temp = (25 + Math.random() * 5).toFixed(2);
+      document.getElementById("temp").innerHTML = temp + " °C";
+    }
+
+    setInterval(actualizarTemp, 1000);
+  </script>
+
+</body>
+</html>
